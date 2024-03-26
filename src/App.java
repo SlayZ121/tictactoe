@@ -1,10 +1,11 @@
 import board.Board;
 import player.Player;
+import game.Game;
 import java.util.*;
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("First Project -> Tic Tac Toe");
-        Board b=new Board(4,'#');
+        Board b=new Board(3,'-');
         b.printboardconfig();
         Scanner sc=new Scanner(System.in);
         System.out.println("Please enter the name of player: ");
@@ -19,6 +20,8 @@ public class App {
         p2.setPlayerNameandSymbol("Akash", 'O');
         p2.getPlayerNameAndSymbol();
         
+        Game game=new Game(new Player[] {p1,p2}, b);
+        game.play();
         sc.close();
     }
 }
