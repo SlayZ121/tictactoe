@@ -16,8 +16,14 @@ public class App {
         Player p1=new Player();
         p1.setPlayerNameandSymbol(name,symbol);
         p1.getPlayerNameAndSymbol();
+
+        System.out.println("Please enter the name of player: ");
+        String name1=sc.nextLine();
+        System.out.println("Please enter the symbol of player: ");
+        char symbol1=sc.nextLine().charAt(0);
         Player p2=new Player();
-        p2.setPlayerNameandSymbol("Akash", 'O');
+
+        p2.setPlayerNameandSymbol(name1, symbol1);
         p2.getPlayerNameAndSymbol();
         
         Game game=new Game(new Player[] {p1,p2}, b);
